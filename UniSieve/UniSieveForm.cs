@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniSieve.Homograph_Filter;
 
 namespace UniSieve
 {
@@ -15,6 +16,11 @@ namespace UniSieve
         public UniSieveForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = HomographFilter.Filter(textBox1.Text, HomographFilter.CharacterType.Persian);
         }
     }
 }
